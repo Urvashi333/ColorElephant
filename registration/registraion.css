@@ -1,0 +1,239 @@
+.register {
+  overflow: hidden;
+}
+.register fieldset {
+  border: 1px solid #f58700;
+  padding: 17px;
+  border-radius: 38px;
+  width: 100%;
+}
+.register legend {
+  border: 0px solid #f58700;
+  color: #f58700;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  height: inherit;
+  margin-top: 15px;
+}
+.register .position-top {
+  align-items: center;
+  margin-top: 5%;
+}
+.register .email-placeholder {
+  color: #ffffff;
+  margin: 0% 0% 0% 0%;
+  width: 100%;
+  text-align: left;
+}
+.register md-input-container {
+  color: #fff;
+  width: 100%;
+  margin: 18px 0 0;
+}
+.register md-input-container:not(.md-input-invalid).md-input-focused .md-input, .register md-input-container:not(.md-input-invalid) md-datepicker.dob.ng-valid .md-input md-icon .md-font-icon {
+  border-bottom: solid 2px #f58700;
+}
+.register md-input-container:not(.md-input-invalid).md-input-focused md-icon {
+  color: #f58700;
+}
+.register md-input-container label {
+  font-weight: normal !important;
+}
+.register md-input-container .md-input {
+  border-bottom: solid 2px #acacac
+}
+.register md-input-container.md-input-invalid .md-input {
+  border-bottom: solid 2px rgb(221, 44, 0);
+}
+.register md-input-container.md-input-invalid md-datepicker.dob.ng-valid .md-input md-icon .md-font-icon {
+  border-bottom: solid 2px #dd2c00;
+}
+.register md-input-container label, .register md-input-container label:after, .register md-select[required].ng-invalid:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  color: #acacac !important;
+}
+.register md-input-container.md-default-theme.md-input-invalid .md-input, .register md-input-container.md-input-invalid .md-icon .md-font-icon {
+  border-color: rgb(221, 44, 0);
+}
+.register md-input-container:not(.md-input-focused).md-input-invalid md-icon {
+  color: ;
+  border-color: rgb(221, 44, 0);
+}
+.register md-input-container.md-input-invalid md-icon {
+  color: red;
+  border-color: rgb(221, 44, 0);
+}
+.register input {
+  color: #fff;
+  border-color: #7a7a7a;
+  font-weight: normal;
+}
+.register .required input {
+  color: #7a7a7a;
+}
+.register .password-placeholder {
+  color: #ffffff;
+  margin: 0% 0% 0% 0%;
+  width: 100%;
+  text-align: left;
+}
+.register .password-icon {
+  color: #7a7a7a;
+}
+.register md-checkbox.md-default-theme:not(.md-checked) .md-icon, .register md-checkbox:not(.md-checked) .md-icon {
+  border-color: #acacac !important;
+}
+.register md-checkbox.md-checked .md-icon {
+  background-color: #757575;
+}
+.register .rememberme-position {
+  margin: 0% 0% 0% 28%;
+  font-weight: normal;
+}
+
+.register .md-button.md-accent.md-raised {
+  color: #ffffff;
+  background-color: #f58700;
+  border-radius: 10px;
+}
+.register .md-button.md-accent[disabled]
+{
+  background-color:rgba(245, 135, 0, 0.69);
+  cursor: default;
+  border-radius: 10px;
+}
+.register .md-button.md-accent.md-raised:not([disabled]):hover {
+  background-color: #f58700;
+}
+
+.register .button {
+  width: 88%;
+  margin: 0% 0% 19% 6%
+}
+.register .forgot-password {
+  margin: -16% 0% 0% 29%;
+}
+.register .link-terms-and-policy {
+  color: #757576;
+  text-decoration: underline;
+  font-weight: normal;
+  cursor: pointer;
+}
+.register .terms-and-policy-text {
+  margin-left: 15px;
+  margin-top: -15px;
+}
+
+.register .register-button {
+  border-radius: 1px;
+}
+
+.register a:hover, a:focus {
+  color: #f58700;
+  outline: transparent;
+}
+.checkregister {
+  background: url(../../img/checked.png) no-repeat 0 50%;
+  padding-left: 22px;
+  line-height: 24px;
+  color: #f58700;
+  padding-left: 22px;
+  padding-top: 6px;
+  background-position: 2px;
+  list-style: none;
+  margin-left: -20px;
+}
+.checkregister-remove {
+  padding-left: 22px;
+  line-height: 24px;
+  padding-left: 22px;
+  padding-top: 6px;
+  background-position: 2px;
+  margin-left: -20px;
+}
+md-input-container .md-auto-hide .md-input-message-animation:not(.ng-animate) {
+  opacity: 0;
+  margin-top: -100px;
+}
+md-input-container:not(.md-input-invalid) .md-auto-hide .md-input-message-animation {
+  opacity: 0;
+  margin-top: -100px;
+}
+.register .registration-terms {
+  color: #7a7a7a;
+  font-weight: normal;
+  margin-top: -70px;
+}
+.register .registration-term {
+  color: #7a7a7a;
+  font-weight: normal;
+}
+.register .registration-term-align {
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+.register .registration-validation {
+  color: #dd2c00 !important;
+  font-size:12px;
+}
+.register .condition-password {
+  width:195px;
+  margin: 0 auto;
+}
+.register .registration-submit-align {
+  margin-top: 20px
+}
+.register .register-eye-icon {
+  position: absolute;
+  margin-left: -25px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.register md-input-container.md-input-invalid .md-icon {
+  color: red;
+  border-color: rgb(221, 44, 0);
+}
+.register md-input-container:not(.md-input-invalid).md-input-focused .md-icon {
+  color: #f58700 !important;
+}
+.register .password-icon-register {
+  color: #acacac;
+  position: absolute;
+  right: 1%;
+  top: 14%;
+  cursor: pointer;
+}
+.register.default {
+  color: #808080;
+}
+.register .blue {
+  color: #f58700;
+}
+.register .link-password{
+  color: #757576;
+  text-decoration: underline;
+  font-weight: normal;
+}
+.register .checkbox label,.register .radio label {
+  padding-left: 0 !important;
+}
+
+.register .title{
+  color:#808080;
+  font-weight: normal;
+}
+
+.register .active{
+  border-bottom:2px solid #f58700 !important;
+}
+
+.register #candidate_confirm{
+  display:inline-block;
+  margin:0;
+}
+
+.register .freelancer-confirmation{
+   margin:auto;
+   width:310px;
+}

@@ -1,0 +1,64 @@
+<div  class="login" style="overflow:hidden">
+  <div class="row ">
+  <div class="col-md-4" ></div>
+  <div id="login" class="position-top col-md-4 ">
+    <form  ng-submit="submit()" novalidate="true" name="loginForm">
+      <fieldset>
+        <legend>login</legend>
+        <div class="form-group  text-center">
+          <p class="title">
+            lovely you're here - please login
+            </p>
+            <p class="title">
+             or
+             <a ui-sref="access.register"  class="link-password" style="color:#f58700">create your account
+             </a>
+            </p>
+        </div>
+
+        <div class="row email-placeholder input">
+          <md-input-container>
+            <input type="email" name="email" class="form-control" ng-class="{'active':login_details.email}"  placeholder="email"  ng-model="login_details.email" required ng-keypress="checkUser()" autocomplete="off">
+            <span class="emailError" ng-show="loginForm.email.$error.email">not a valid e-mail address</span>
+            <div ng-messages="loginForm.email.$error">
+              <div class="emailError" ng-message="required">you forgot to enter your email</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div class="row password-placeholder">
+          <md-input-container>
+            <input type="{{inputType}}"  ng-class="{'active':login_details.password}"  id="login_details.password" ng-model="login_details.password" name="password"  placeholder="password" data-toggle="password" required autocomplete="off" ng-keypress="checkUser()" ng-paste="$event.preventDefault()" ng-cut="$event.preventDefault()" ng-copy="$event.preventDefault()"/>
+            <div ng-messages="loginForm.password.$error">
+          <div class="emailError" ng-message="required">
+            you forgot to enter your password
+          </div>
+        </div>
+        <div ng-class="changeColor" class="password-icon">
+          <i   class="fa fa-eye md-icon" aria-hidden="true" ng-click=" hideShowPassword()" ></i>
+        </div>
+          </md-input-container>
+
+        </div>
+        <div class="row rememberme-position">
+          <label class="icheck ichek-lg title">
+          				<input type="checkbox" ng-model="login_details.rememberme" aria-invalid="false">
+          				<i></i>remember me
+          			</label>
+        </div>
+        <div class="row button-style form-actions">
+          <md-button type="submit" class="md-accent md-raised button" style="text-transform: lowercase;">login</md-button>
+        </div>
+
+        <div class="row forgot-password">
+
+          <a ui-sref="access.forgotpwd"  class="link-password" style="color:#f58700">forgot password ?</a>
+
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-md-4" ></div>
+</div>
+</div>

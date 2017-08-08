@@ -1,0 +1,239 @@
+.login .mdicon .input[type=checkbox].with-font:checked ~ label:before  {
+  content: "\f00c";
+  font-size: 1.2em;
+  color: darkgreen;
+  letter-spacing: 5px;
+}
+.login .default{
+  color:#808080;
+}
+.login .icheck input:checked+i {
+  border-color: #f58700;
+}
+.login .icheck>i {
+  height:21px;
+  width:21px;
+  border-radius: 3px;
+  border: 1px solid #f58700;
+}
+.login .icheck input:checked+i:before {
+  color: #f58700;
+  margin-left: -1%;
+  content: "\f00c";
+  color: #f58700;
+
+}
+.login .blue{
+  color:#f58700;
+}
+.login fieldset {
+  border: 1px solid #f58700;
+  padding: 17px;
+  border-radius: 38px;
+  width: 100%;
+}
+.login .emailError{
+  color:rgb(221,44,0);
+  font-style:normal;
+  font-size:12px;
+}
+.login input:-webkit-autofill,
+.login input:-webkit-autofill:hover,
+.login input:-webkit-autofill:focus,
+.login input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+}
+.login input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.login .checkbox>.icheck input:checked+i {
+  border: 1px solid #f58700;
+  -webkit-appearance: none;
+}
+.login checkbox label, .radio label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+.login legend {
+ /* padding: 0.2em 0.5em;*/
+ border: 0px solid #f58700;
+ color: #f58700;
+ font-size: 20px;
+ text-align: center;
+ width: 20%;
+ height: inherit;
+ margin:0% 0% 0% 40%;
+ font-family: 'Roboto', sans-serif !important;
+
+}
+
+.login .position-top{
+  align-items: center;
+  margin-top: 11%;
+  /*margin-left:34%;*/
+}
+.login .email-placeholder {
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+  margin-left:0%;
+}
+
+.login md-input-container {
+  color: #fff;
+  width: 100%;
+  margin: 18px 0 0;
+}
+
+.login md-input-container label, .login md-input-container label:after, .login md-select[required].ng-invalid:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  color: #acacac !important;
+}
+.login input,
+textarea {
+  font-size: 24px;
+  /*padding: 10px;*/
+
+  color: red;
+  text-shadow: 0px 0px 0px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+.login input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  color:#ffffff;
+  text-shadow: none;
+  -webkit-text-fill-color: initial;
+}
+.login md-input-container:not(.md-input-invalid).md-input-focused .md-input, .login md-input-container:not(.md-input-invalid) md-datepicker.dob.ng-valid .md-input  {
+  border-bottom: solid 2px  #f58700 !important;
+}
+
+.login md-input-container:not(.md-input-invalid).md-input-focused {
+  color: #f58700 !important;
+  /*border-bottom: solid  #f58700;*/
+}
+.login md-input-container label {
+  font-weight: normal !important;
+}
+.login md-input-container .md-input {
+  border-bottom: solid 2px #acacac
+}
+.login  md-input-container.md-input-invalid .md-input {
+  border-bottom: solid 2px rgb(221,44,0);
+  /*border-color: rgb(221,44,0);*/
+}
+
+.login md-input-container.md-input-invalid md-datepicker.dob.ng-valid .md-input  {
+  border-bottom: solid 2px  #dd2c00;
+}
+
+.login md-input-container label, .login md-input-container label:after, .login md-select[required].ng-invalid:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  color: #acacac !important;
+  /*border-bottom: solid 1px #acacac;*/
+}
+.login md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid  {
+  border-color: rgb(221,44,0);
+}
+.login md-input-container:not(.md-input-focused).md-input-invalid  md-icon{
+  color:red;
+  border-color: rgb(221,44,0);
+}
+.login md-checkbox.md-checked .md-ink-ripple {
+  color: #f58700;
+}
+.login md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+  background-color: #434343;
+  border: 2px solid #f58700;
+  border-radius: 5px;
+
+}
+.login md-checkbox:not(.md-checked) .md-icon {
+  border-color: #f58700 !important;
+  border-radius: 5px;
+}
+.login md-checkbox.md-default-theme.md-checked .md-icon:after, md-checkbox.md-checked .md-icon:after {
+  border-color: #f58700;
+}
+.login input {
+  color: #fff;
+  border-color: #7a7a7a;
+  font-weight: normal;
+}
+
+.login .required input {
+  color: #7a7a7a;
+}
+
+.login .button-style{
+  width: 112%;
+  margin-left: -6%
+}
+.login .password-placeholder {
+  color: #ffffff;
+  margin-left:0%;
+  width: 100%;
+  text-align: left;
+}
+
+.login .password-placeholder .password-icon {
+  /*color: #acacac;*/
+  position: absolute;
+  right: 1%;
+  top: 14%
+}
+.login .emailError{
+  color:red !important;
+}
+.login .rememberme-position{
+ border-radius: 5px;
+ margin-bottom: 15px;
+ text-align:center;
+}
+.login .md-button.md-accent.md-raised {
+  color: rgb(255,255,255);
+  background-color: #f58700 !important;
+  border-radius: 10px;
+}
+.login .md-button.md-accent.md-raised:not([disabled]):hover {
+  background-color: #f58700;
+}
+.login md-checkbox .md-ink-ripple {
+  color: #f58700;
+}
+.login .button{
+  width: 88%;
+  margin: 0% 0% 19% 6%
+}
+.login .forgot-password{
+  text-align: center;
+  margin-top: -16%;
+}
+.login .link-password{
+  color: #757576;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.login .login-button{
+  border-radius:1px;
+}
+
+.login a:hover, a:focus{
+  color:#f58700;
+  outline:transparent;
+}
+
+.login .title{
+  color:#808080;
+  font-weight: normal;
+}
+
+.login .active{
+  border-bottom:2px solid #f58700 !important;
+}

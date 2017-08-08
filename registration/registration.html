@@ -1,0 +1,89 @@
+<div class="register">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="position-top col-md-4">
+      <form name="registerForm" ng-submit="submitForm()" autocomplete="off">
+        <fieldset>
+          <legend align="center">register</legend>
+          <div class="form-group  text-center registration-term-align">
+            <p>&nbsp welcome &nbsp {{firstName}} &nbsp {{lastName}}</p>
+            <p class="title">lovely you're here - please register</p>
+            <p class="title" style=" margin-left:-4%">or &nbsp<a ui-sref="access.login" class="link-password" style="color:#f58700;">login</a></p>
+          </div>
+
+          <div ng-show="freelancerEmailFeild">
+            <div class="row email-placeholder">
+              <md-input-container>
+                <input type="email" placeholder="email" name="email" tabindex="1" ng-model="register.email" required ng-class="{'active': register.email}" autocomplete="off">
+                <span class="registration-validation" ng-show="registerForm.email.$error.email">not a valid e-mail address</span>
+                <div ng-messages="registerForm.email.$error">
+                  <div ng-message="required">you forgot to enter your email</div>
+                </div>
+              </md-input-container>
+            </div>
+          </div>
+
+          <div ng-show="othersEmailFeild">
+            <div class="row email-placeholder">
+              <md-input-container>
+                <input type="email" placeholder="email" ng-model="register.email" readonly required
+                ng-class="{'active': register.email}">
+              </md-input-container>
+            </div>
+          </div>
+
+          <div class="row password-placeholder">
+            <md-input-container>
+              <input type="{{inputType}}" tabindex="2" ng-pattern='/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%]).{8,})/' name="password" class="password-placeholder" ng-model="register.password" ng-model-options="{ allowInvalid: true }" ng-keyup="show($event,register.password)"
+                  placeholder="password" data-toggle="password" required ng-paste="$event.preventDefault()" ng-cut="$event.preventDefault()" ng-copy="$event.preventDefault()"  ng-class="{'active': register.password}" autocomplete="off"/>
+              <div ng-class="class" class="password-icon-register default">
+                <i class="fa fa-eye" aria-hidden="true" ng-click="hideShowPassword()" ng-class="{'ng-valid':(login_details.password.length>0)}"></i>
+              </div>
+              <span class="registration-validation" ng-show="registerForm.password.$error.required && registerForm.password.$touched"> you forgot to enter your password </span>
+              <span class="registration-validation" ng-show="registerForm.password.$dirty&&registerForm.password.$error.pattern">please match the password pattern</span>
+            </md-input-container>
+          </div>
+
+          <div class="row email-placeholder">
+            <md-input-container>
+              <input type="{{inputType1}}" tabindex="3" placeholder="confirm password" name="confirmpassword" ng-model="register.confirmPassword" compare-to="register.password" required ng-paste="$event.preventDefault()"  ng-cut="$event.preventDefault()" ng-copy="$event.preventDefault()"  ng-class="{'active': register.confirmPassword}" autocomplete="off"/>
+              <span class="registration-validation" ng-show="registerForm.confirmpassword.$error.required&&registerForm.confirmpassword.$touched">  you forgot to enter your confirm password</span>
+              <span class="registration-validation" ng-show="registerForm.confirmpassword.$dirty&&registerForm.confirmpassword.$error.compareTo"> confirm password didn't match the password entered</span>
+            </md-input-container>
+          </div>
+
+          <div>
+            <ul class="condition-password">
+              <li id="lletter">one lowercase character</li>
+              <li id="uletter">one uppercase character</li>
+              <li id="number">one number</li>
+              <li id="char">one special character</li>
+              <li id="length">8 characters minimum</li>
+            </ul>
+          </div>
+
+          <div class="freelancer-confirmation" ng-if="freelancerEmailFeild">
+            <div class="checkbox padding-left-20">
+              <label class="icheck ichek-lg">
+              <input type="checkbox" ng-model="register.check_freelancer" ng-true-value="true" ng-false-value="false" required>
+                <i></i>
+              </label>
+              <p id="candidate_confirm">I confirm that I'm able to work as a freelancer</p>
+            </div>
+          </div>
+
+          <div class="row registration-submit-align">
+            <md-button type="submit" class="md-accent md-raised button" ng-disabled='registerForm.$invalid' style="text-transform: lowercase;">get started</md-button>
+          </div>
+
+          <div class="text-center registration-terms">
+            <p> by clicking this button, you agree to</p>
+            <p class="terms-and-policy-text"> our <a class="link-terms-and-policy" style="color:#f58700" href="https://fective.ch/ToU" target="_blank"> terms of service and privacy policy</a></p>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
