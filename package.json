@@ -1,0 +1,23 @@
+{
+  "name": "colorelephant",
+  "version": "1.0.0",
+  "description": "Hello All!!! As mentioned by you I will work on the questions and requirements to develope a user interface for the employees with a form containing their details and password protective registration.I hope you will like my work :).",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Urvashi333/ColorElephant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Urvashi333/ColorElephant/issues"
+  },
+  "homepage": "https://github.com/Urvashi333/ColorElephant#readme"
+}
