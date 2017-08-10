@@ -1,0 +1,106 @@
+<div class="row contact-details">
+  <div class="col-md-12">
+    <form name="step1" class="margin-top-40" novalidate>
+
+      <md-input-container>
+        <input type="text" placeholder="Name" class="form-control" name="name" ng-model="employee_details.name" required>
+      </md-input-container>
+
+      <div class="row">
+          <md-input-container>
+            <input type="email" placeholder="E-mail" class="form-control" name="email" ng-model="employee_details.email" required>
+          </md-input-container>
+      </div>
+
+      <div class="row">
+          <md-input-container>
+            <input type="text" placeholder="web address" class="form-control" name="webaddress" ng-model="employee_details.webaddress" required>
+          </md-input-container>
+      </div>
+
+      <div class="row">
+          <md-input-container>
+            <md-input-container class="description">
+          <!-- <label>{{translation.rm_projects_project_details.Project_Description}</label> -->
+          <textarea id="description" placeholder="Cover Letter" rows="10" cols="50" class="form-control" name="description" ng-model="employee_details.coverletter" ng-trim="false" md- maxlength="5000" required md-no-autogrow
+              md-no-resize></textarea>
+            <span class="wordlimit" style="float: right;">{{5000 - employee_details.coverletter.length}} characters  left</span>
+            <div ng-messages="projectdetails.description.$error">
+              <div ng-message="required">cover letter is required</div>
+              <div ng-message="md-maxlength">max limit reached</div>
+            </div>
+          </md-input-container>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <md-input-container>
+            <input type="text" placeholder="{{translation.candidate_contact_details.City}}" class="form-control" name="city" ng-model="contact_details.city" required>
+            <div ng-messages="step1.city.$error">
+              <div ng-message="required">city is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div class="col-md-4">
+          <md-input-container>
+            <label>{{translation.candidate_contact_details.Country}}</label>
+            <md-select ng-model="contact_details.country" ng-model-options="{trackBy: '$value.code'}" placeholder="{{translation.candidate_contact_details.Country}}" ng-change="validatePhoneCode(contact_details.country)" required>
+              <md-optgroup label="{{translation.candidate_contact_details.Country}}">
+                <md-option ng-repeat="country in countries" ng-value="country">
+                  {{country.name}}
+                </md-option>
+              </md-optgroup>
+            </md-select>
+            <div ng-messages="step1.country.$error">
+              <div ng-message="required">country is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div class="col-md-4">
+          <md-input-container>
+            <input type="text" placeholder="{{translation.candidate_contact_details.Zip_Code}}" class="form-control" name="zipcode" ng-model="contact_details.zipcode" ng-change="validateZipCode(contact_details.country, contact_details.zipcode)" required>
+            <div ng-messages="step1.zipcode.$error">
+              <!-- <div ng-message="required">zip code is required!</div> -->
+              <div ng-show="invalidzip">invalid zip code!</div>
+            </div>
+          </md-input-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-4 code-div">
+            <md-input-container>
+              <input type="text" ng-class="{'ng-valid':(phone_code.length>0)}" id="phone_code" placeholder="+xx" class="form-control code-area" name="phone_number_code" ng-model="contact_details.phone_code" readonly>
+            </md-input-container>
+          </div>
+          <div class="col-md-8 mobile-div">
+            <md-input-container>
+              <input type="text" class="phone-area" placeholder="{{translation.candidate_contact_details.Mobile_Phone_Number}}" class="form-control phone-area" name="phone_number" ng-model="contact_details.phone_number" required ng-pattern="/^[0-9]{10}$/">
+              <div ng-messages="step1.phone_number.$error">
+                <div ng-message="required">phone number is required!</div>
+                <div ng-message="pattern">invalid phone number!</div>
+              </div>
+            </md-input-container>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group criminal-record">
+            <p class="label-text" ng-if="criminal_record.length>0 || contact_details.criminal_record">{{translation.candidate_contact_details.Criminal_Record}}</p>
+            <input id="uploadFile" type="text" class="form-control" placeholder="{{translation.candidate_contact_details.Criminal_Record}}" readonly ng-class="{'ng-valid':(criminal_record.length>0 || contact_details.criminal_record)}">
+            <label class="input-group-btn">
+              <span class="btn btn-default">
+                  <i class="fa fa-folder-open"></i>
+                 <input id="uploadBtn" name="criminal_record" type="file" class="no-display" ngf-select="criminalRecordUpload($file)" accept=".docx, .doc, .pdf">
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary pull-right next-top-space" ng-click="setTab()">{{translation.candidate_contact_details.Next}}</button>
+      </div>
+    </form>
+  </div>
+
+</div>
